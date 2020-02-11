@@ -15,11 +15,8 @@ Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/services', 'PagesController@services');
 // Route::get('/create', 'PagesController@create');
+Auth::routes();
 
-// Route::get('/test', function () {
-//     $name = request('name');
-//     return view('test', ['name' => $name]);
-// });
-
+Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('posts', 'PostsController');
 ?>
